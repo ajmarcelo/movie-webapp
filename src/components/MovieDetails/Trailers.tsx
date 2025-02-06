@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { baseApi } from '../../api/AxiosInstance'
 import YouTube from 'react-youtube' // npm install react-youtube
 
@@ -28,7 +28,7 @@ function Trailers({movieId}: { movieId: string }) {
     }
 
     return (
-        <div className='mx-16'>
+        <div>
             {trailers.length > 0 &&
                 <div className='mt-8'>
                     <h1 className='text-3xl text-yellow-500 font-bold'>Watch Trailers</h1>

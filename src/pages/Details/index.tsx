@@ -60,8 +60,10 @@ function Details() {
                             </div>
                         </div>
                     </div>
-                    <Trailers movieId={params.id}/>
-                    <SimilarMovies movieId={params.id}/>
+                    <div className='mx-16'>
+                        <Trailers movieId={params.id}/>
+                        <SimilarMovies movieId={params.id}/>
+                    </div>
                 </div>
             </div>
         }

@@ -16,3 +16,14 @@ export interface MovieCardType {
     vote_average: number;
     original_language: string;
 }
+
+export interface CategoryType {
+    name: string,
+    path: string
+}
+export const Category : CategoryType[] = [
+    {name: "Now Playing", path: "now_playing"},
+    {name: "Popular", path: "popular"},
+    {name: "Top Rated", path: "top_rated"},
+    {name: "Upcoming", path: "upcoming"}
+]

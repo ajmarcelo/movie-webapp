@@ -7,15 +7,15 @@ import Details from './pages/Details'
 const App = () => {
   return (
     <div className=''>
-      <NavBar />
-      <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/movies" element={<Movies/>}/>
-        <Route path="/moviedetails/:id" element={<Details />}/>
-        <Route path="*" element={<Navigate to="/" />}/>
-      </Routes>
-      </BrowserRouter>
+    <BrowserRouter>
+        <NavBar />
+        <Routes>
+            <Route path="/" element={<Home/>}/>
+            <Route path="/movies" element={<Movies/>}/>
+            <Route path="/moviedetails/:id" element={<Details />}/>
+            <Route path="*" element={<Navigate to="/" />}/>
+        </Routes>
+    </BrowserRouter>
     </div>
   )
 }

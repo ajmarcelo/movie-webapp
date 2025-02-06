@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import HomeSlider from '../../components/Home/HomeSlider'
 import { baseApi } from '../../api/AxiosInstance'
 import { MovieCardType } from '../../utils/constant'

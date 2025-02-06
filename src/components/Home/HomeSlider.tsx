@@ -22,9 +22,9 @@ function HomeSlider() {
     useEffect(()=>{
         const myCarousel = document.getElementById("carouselExample")
 
-        const handleSlide = (event) => {
-            // console.log(event.from, "---", event.to)
-            setSelected(event.to)
+        const handleSlide = (event:Event) => {
+            const customEvent = event as any
+            setSelected(customEvent.to)
         }
         if(myCarousel){
             myCarousel.addEventListener('slid.bs.carousel', handleSlide)
@@ -37,7 +37,6 @@ function HomeSlider() {
     const fetchUpcoming = async () => {
         try {
             const response = await baseApi.get("3/movie/upcoming?language=en-US&page=1")
-            console.log(response.data.results)
             setCarouselMovies(response.data.results)
         } 
         catch(err) {

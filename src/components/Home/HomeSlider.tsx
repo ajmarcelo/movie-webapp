@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import { baseApi } from '../../api/AxiosInstance';
-import { CarouselMovie } from '../../utils/constant';
+import { CarouselMovieType } from '../../utils/constant';
 import HomeCarousel from './HomeCarousel';
 import HomeCarouselList from './HomeCarouselList';
 
 function HomeSlider() {
-    const [carouselMovies, setCarouselMovies] = useState<CarouselMovie[]>([])
+    const [carouselMovies, setCarouselMovies] = useState<CarouselMovieType[]>([])
     
     const [selected, setSelected] = useState(0)
     const [next, setNext] = useState<number[]>([])

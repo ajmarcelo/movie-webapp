@@ -1,5 +1,6 @@
 body {
     background: black;
+    color: white;
 }
 ._carouselGradient {
     background: linear-gradient(to bottom, rgb(0,0,0,0), rgb(0,0,0))

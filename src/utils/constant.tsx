@@ -1,6 +1,7 @@
 export const imagepath = "https://image.tmdb.org/t/p/original"
 
 export interface CarouselMovieType {
+    id: number;
     backdrop_path: string;
     poster_path: string;
     overview: string;
@@ -27,3 +28,16 @@ export const Category : CategoryType[] = [
     {name: "Top Rated", path: "top_rated"},
     {name: "Upcoming", path: "upcoming"}
 ]
+
+export interface MovieDetailType {
+    id: number,
+    poster_path: string,
+    backdrop_path: string,
+    original_title: string,
+    release_date: string,
+    tagline: string,
+    overview: string,
+    genres: {name:string}[],
+    vote_average: number,
+    original_language: string
+}

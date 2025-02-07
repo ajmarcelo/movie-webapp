@@ -3,6 +3,7 @@ import { baseApi } from '../../api/AxiosInstance';
 import { CarouselMovieType } from '../../utils/constant';
 import HomeCarousel from './HomeCarousel';
 import HomeCarouselList from './HomeCarouselList';
+import HomeCarouselSkeleton from '../Skeleton/HomeCarouselSkeleton';
 
 function HomeSlider() {
     const [carouselMovies, setCarouselMovies] = useState<CarouselMovieType[]>([])
@@ -52,17 +53,21 @@ function HomeSlider() {
         <div className="row">
             {/* div for carousel slider */}
             <div className='relative col-xl-8'>
-                <div id="carouselExample" className="carousel slide h-full">
-                    <HomeCarousel carouselMovies={carouselMovies}/>
-                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span className="visually-hidden">Previous</span>
-                    </button>
-                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span className="visually-hidden">Next</span>
-                    </button>
-                </div>
+                { carouselMovies.length > 0 ?
+                    <div id="carouselExample" className="carousel slide h-full">
+                        <HomeCarousel carouselMovies={carouselMovies}/>
+                        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Previous</span>
+                        </button>
+                        <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                :
+                    <HomeCarouselSkeleton/>
+                }
             </div>
             {/* div for carousel list */}
             <div className="col-xl-4 lg:block hidden ">

@@ -7,7 +7,7 @@ interface MovieListProps {
 }
 const MovieList = ({ movies, title }: MovieListProps) => {
     return (
-    <div className='md:mt-14 sm:mt-8 mt-2 px-4'>
+    <div className='md:mt-14 sm:mt-8 mt-2 px-2'>
         {
             title &&
             <h1 className='md:text-3xl sm:text-2xl text-xl font-bold text-yellow-500'>{title}</h1>

@@ -7,12 +7,12 @@ interface MovieListProps {
 }
 const MovieList = ({ movies, title }: MovieListProps) => {
     return (
-    <div className='mt-14'>
+    <div className='md:mt-14 sm:mt-8 mt-2 px-4'>
         {
             title &&
-            <h1 className='text-3xl font-bold text-yellow-500'>{title}</h1>
+            <h1 className='md:text-3xl sm:text-2xl text-xl font-bold text-yellow-500'>{title}</h1>
         }
-        <div className='row row-cols-6'>
+        <div className='row row-cols-xl-6 row-cols-lg-5 row-cols-md-4 row-cols-sm-3 row-cols-2'>
             {
                 movies.length > 0 && movies.map((data,ind) => (
                     <MovieCard key={ind} movieData={data}/>

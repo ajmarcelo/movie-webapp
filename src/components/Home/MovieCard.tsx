@@ -29,9 +29,9 @@ const MovieCard = ({ movieData }:  MovieCardProps)  => {
                     </div>
 
                     <div className='bg-[#222] p-2'>
-                        <h1 className={`text-[17px] font-semibold line-clamp-1
+                        <h1 className={`md:text-[17px] text-sm font-semibold line-clamp-1
                                         ${movieData.id === hover ? "underline" : ""}`}>{movieData.title}</h1>
-                        <div className='text-[15px] text-zinc-300 mt-2'>
+                        <div className='md:text-[15px] text-[13px] text-zinc-300 mt-2'>
                             <h1 className=''>Rating: {String(movieData.vote_average).substring(0,3)}</h1>
                             <h1 className=''>Language: {movieData.original_language}</h1>
                             <h1 className=''>Release Date: {movieData.release_date}</h1>

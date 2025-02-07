@@ -43,23 +43,27 @@ function NavBar() {
     
     return (
     <nav className="bg-[#121212] py-2">
-        <div className="flex justify-between items-center w-[80%] mx-auto">
-            <div className="flex space-x-16">
+        <div className="flex justify-between items-center 
+                        lg:w-[80%] md:w-[90%] w-[95%] mx-auto">
+            <div className="flex items-center lg:space-x-16 sm:space-x-8 scale-x-1">
                 <Link to="/">
-                <div className="flex flex-col text-yellow-500">
+                <div className="flex flex-col text-yellow-500 sm:scale-100 scale-[70%]">
                     <h1 className="text-[18px] leading-4">ALLABOUT</h1>
                     <h1 className="text-[24px] leading-5 font-semibold">MOVIES</h1>
                 </div>
                 </Link>
                 <Link to="/movies">
-                    <button className="text-[18px] text-yellow-500 hover:underline">EXPLORE</button>
+                    <button className="sm:text-[18px] text-md text-yellow-500 hover:underline">EXPLORE</button>
                 </Link>
             </div>
 
             <div className="relative">
                 <input
                 placeholder="search"
-                className="w-[500px] h-10 bg-black text-[#c2c2c2] text-lg outline-none px-4 placeholder:text-[#646464] rounded-xl" 
+                className="md:w-[500px] sm:w-[350px] w-[180px] h-10 bg-black 
+                            text-[#c2c2c2] md:text-lg sm:text-md text-sm 
+                            outline-none sm:px-4 px-3 placeholder:text-[#646464] 
+                            rounded-xl" 
                 type="text"
                 onChange={handleChange}
                 onKeyDown={handleKeyPress}
@@ -73,7 +77,7 @@ function NavBar() {
 
                 }
                 
-                { showSearch &&
+                { showSearch && search.length > 0 &&
                     <div className="relative" onClick={()=>toggleShow(false)}>
                         <div className="absolute z-50 left-0 w-full bg-zinc-800 rounded-xl">
                             <div className="py-3 pl-5">

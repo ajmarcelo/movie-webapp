@@ -40,7 +40,6 @@ const MovieCard = ({ movieData }:  MovieCardProps)  => {
                 </div>
             </div>
         </Link>
-
     )
 }
 

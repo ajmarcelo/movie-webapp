@@ -1,5 +1,3 @@
-import React from 'react'
-
 function MovieCardSkeleton() {
     return (
         <div className='col placeholder-glow'>
@@ -12,9 +10,9 @@ function MovieCardSkeleton() {
                 <div className='bg-[#222] p-2'>
                     <h1 className={`md:text-[17px] text-sm w-[70%] placeholder`}></h1>
                     <div className='md:text-[15px] text-[13px] text-zinc-300 mt-2'>
-                        <h1 className='w-[90%] placeholder'>vote_average</h1>
-                        <h1 className='w-[80%] placeholder'>Language</h1>
-                        <h1 className='w-[40%] placeholder'>Release</h1>
+                        <h1 className='w-[90%] placeholder'></h1>
+                        <h1 className='w-[80%] placeholder'></h1>
+                        <h1 className='w-[40%] placeholder'></h1>
                     </div>
                 </div>
             </div>

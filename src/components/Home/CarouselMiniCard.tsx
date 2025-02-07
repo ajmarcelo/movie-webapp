@@ -19,7 +19,7 @@ function CarouselMiniCard({carouselMovies, item, ind}: CarouselMiniCardProps) {
                 onMouseEnter={()=> setHover(ind)}
                 onMouseLeave={() => setHover(null)}>
                     <img src={imagepath + carouselMovies[item]?.poster_path} 
-                        className='w-[100px]' alt="" />
+                        className='w-[100px] aspect-[4/6]' alt="" />
                     <div className="flex flex-col justify-between py-2">
                         {/* Title and Overview */}
                         <div className="leading-5">

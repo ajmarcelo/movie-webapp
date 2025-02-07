@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Category, MovieCardType } from '../../utils/constant'
 import { baseApi } from '../../api/AxiosInstance'
 import MovieList from '../../components/Home/MovieList'

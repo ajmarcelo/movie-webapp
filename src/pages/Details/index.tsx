@@ -4,6 +4,7 @@ import { baseApi } from '../../api/AxiosInstance'
 import { imagepath, MovieDetailType } from '../../utils/constant'
 import Trailers from '../../components/MovieDetails/Trailers'
 import SimilarMovies from '../../components/MovieDetails/SimilarMovies'
+import MovieDetailsSkeleton from '../../components/Skeleton/MovieDetailsSkeleton'
 
 function Details() {
 
@@ -27,11 +28,11 @@ function Details() {
     
     return (
     <div>
-        {details && params.id &&
+        { details && params.id ?
             <div className='relative h-fit w-full'>
                 <div className='relative'>
                     <img src={imagepath+details.backdrop_path}
-                        className='opacity-40 w-full min-h-[400px] aspect-[7/4] object-center'
+                        className='opacity-40 w-full min-h-[400px] aspect-[7/4] object-cover'
                         alt='background'/>
                         <div className="absolute bottom-0 w-full h-full _carouselGradient"></div>
                 </div>
@@ -39,7 +40,7 @@ function Details() {
                     <div className='w-[90%] mx-auto lg:mt-[500px] md:mt-[400px] mt-[200px]'>
                         <div className='md:flex gap-8'>
                             <img src={imagepath+details?.poster_path} 
-                                className='lg:w-[350px] md:w-[280px] sm:w-[250px] w-[200px] h-fit'
+                                className='lg:w-[350px] md:w-[280px] sm:w-[250px] w-[200px] aspect-[4/6] h-fit'
                                 alt=""/>
                             <div className=''>
                                 <h1 className='lg:text-5xl md:text-4xl sm:text-3xl text-2xl'>{details?.original_title}
@@ -64,6 +65,8 @@ function Details() {
                     </div>
                 </div>
             </div>
+        :
+            <MovieDetailsSkeleton/>
         }
     </div>
     )

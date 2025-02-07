@@ -70,7 +70,7 @@ function NavBar() {
                 onClick={()=>toggleShow(true)}/>
                 
                 { showSearch && search.length > 0 && 
-                    <div className="absolute z-30 top-2 right-2 text-yellow-500 text-2xl"
+                    <div className="absolute z-30 top-2 right-2 text-yellow-500 sm:text-2xl text-xl"
                         onClick={()=>toggleShow(false)}>
                         <IoClose/>
                     </div>
@@ -79,7 +79,7 @@ function NavBar() {
                 
                 { showSearch && search.length > 0 &&
                     <div className="relative" onClick={()=>toggleShow(false)}>
-                        <div className="absolute z-50 left-0 w-full bg-zinc-800 rounded-xl">
+                        <div className="sm:absolute fixed z-50 left-0 sm:max-w-[500px] w-full bg-zinc-800 rounded-xl">
                             <div className="py-3 pl-5">
                                 <div className="flex flex-col gap-2 h-fit max-h-[380px] overflow-y-auto">
                                     {searchedList.length > 0 && searchedList.map((item, ind)=> 
